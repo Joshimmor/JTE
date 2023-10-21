@@ -1,0 +1,18 @@
+.hero{
+    width: 100vw;
+    height: 100vh;
+    max-width:100%;
+    background-color: rgb(218, 218, 218);
+    margin: 0;
+    padding: 0;
+    top:0;
+    left:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    font-size: 15em !important;
+    color: rgb(33, 33, 33);
+}
