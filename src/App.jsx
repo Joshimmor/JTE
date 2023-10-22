@@ -6,6 +6,7 @@ import './App.css'
 import Header from './Components/Header/Header'
 import Home from './Components/Home/Home'
 import Media from './Components/Media/Media'
+import Background from './Components/Background/Background'
 
 function App() {
 
@@ -13,8 +14,10 @@ function App() {
   return (
     <>
       <Header/>
-      <Home/>
-      <Media/>
+      <Background/>
+      {/* <Home/>
+      <Media/> */}
+
     </>
   )
 }
