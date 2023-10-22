@@ -1,14 +1,14 @@
 .header-base{
-    width: 100%;
+    width: 100vw;
     height: 100vh;
+    max-width: 100%;
     position: fixed;
     top:0;
     left:0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-sizing: border-box;
-    padding:  10px 10px;
+
 }
 .header-rows{
     width: inherit;
@@ -17,4 +17,6 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    box-sizing: border-box;
+    padding:  10px 10px;
 }

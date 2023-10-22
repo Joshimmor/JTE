@@ -10,6 +10,7 @@ export default function Media() {
   return (
     <div className='media-hero'>
         <YoutubeEmbed embedId='yrPYehWCbbQ'/>
+        <YoutubeEmbed embedId='yrPYehWCbbQ'/>
     </div>
   )
 }

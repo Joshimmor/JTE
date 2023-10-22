@@ -10,9 +10,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 h1{
-    font-size: 15em !important;
+    font-size: 6em !important;
     color: rgb(33, 33, 33);
 }
+
+@media  (min-width:900px) {
+    h1{
+        font-size: 15em !important;
+        color: rgb(33, 33, 33);
+    }
+}
+
