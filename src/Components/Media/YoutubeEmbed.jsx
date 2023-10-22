@@ -5,7 +5,7 @@ import Ratio from 'react-bootstrap/Ratio';
 
 export default function YoutubeEmbed({embedId}){
   return(
-    <Ratio aspectRatio="16x9">
+    <Ratio aspectRatio="16x9" className="video">
       <iframe 
         src={`https://www.youtube.com/embed/${embedId}`}
         title="YouTube video player" frameborder="0"
