@@ -14,23 +14,15 @@ const Controls = () => {
   const {camera, gl} = useThree();
   return (
       <OrbitControls
-          // args={[camera, gl.domElement]}
-          // ref={orbitRef}
-          // minDistance={30}
-          // maxDistance={30}
-          // maxPolarAngle={1}
-          // minPolarAngle={1}
-          // enableZoom={false}
-          // enablePan={false}
-          // rotateSpeed={.6}
           args={[camera, gl.domElement]}
           ref={orbitRef}
+          minDistance={30}
+          maxDistance={30}
+          maxPolarAngle={1}
+          minPolarAngle={1}
           enableZoom={false}
-          maxDistance={5}
-          minDistance={5}
-          maxPolarAngle={1.25}
-          minPolarAngle={1.25}
-        
+          enablePan={false}
+          // rotateSpeed={.6}
           />
   )
 }
@@ -48,9 +40,9 @@ export default function Background() {
       <div className="background">
           <Suspense>
             <Canvas onCreated={devicePermission}>
-              {/* <Controls /> */}
+              <Controls />
               <ambientLight/>
-              <DeviceOrientationControls/>
+              {/* <DeviceOrientationControls/> */}
               <pointLight position={[10,10,10]} intensity={8} />
               <group>
                   <WhiteTiger position={[0,-20,10]} rotation ={[-1,0,0]}scale={6}/>
