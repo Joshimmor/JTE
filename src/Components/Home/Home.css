@@ -14,11 +14,12 @@
 }
 
 h1{
-    font-size: 6em !important;
-    color: rgb(33, 33, 33);
+    font-size: 8em !important;
+    color: rgb(50, 50, 50);
+  
 }
 
-@media  (min-width:900px) {
+@media  (min-width:700px) {
     h1{
         font-size: 15em !important;
         color: rgb(33, 33, 33);

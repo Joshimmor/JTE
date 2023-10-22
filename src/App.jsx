@@ -15,8 +15,8 @@ function App() {
     <>
       <Header/>
       <Background/>
-      {/* <Home/>
-      <Media/> */}
+      <Home/>
+      <Media/>
 
     </>
   )

@@ -12,17 +12,20 @@ import { Canvas, useFrame, useThree} from '@react-three/fiber';
 const Controls = () => { 
   const orbitRef = useRef();
   const {camera, gl} = useThree();
+  camera.rotateY(20)
   return (
       <OrbitControls
           args={[camera, gl.domElement]}
           ref={orbitRef}
           minDistance={30}
           maxDistance={30}
-          maxPolarAngle={1}
-          minPolarAngle={1}
+          maxPolarAngle={1.5}
+          minPolarAngle={1.5}
           enableZoom={false}
           enablePan={false}
-          // rotateSpeed={.6}
+          rotateSpeed={.6}
+          maxAzimuthAngle={.25}
+          minAzimuthAngle={-.25}
           />
   )
 }
@@ -39,13 +42,13 @@ export default function Background() {
   return (
       <div className="background">
           <Suspense>
-            <Canvas onCreated={devicePermission}>
+            <Canvas>
               <Controls />
               <ambientLight/>
-              {/* <DeviceOrientationControls/> */}
+
               <pointLight position={[10,10,10]} intensity={8} />
               <group>
-                  <WhiteTiger position={[0,-20,10]} rotation ={[-1,0,0]}scale={6}/>
+                  <WhiteTiger position={[0,-10,8]} rotation ={[0,0,0]}scale={7}/>
               </group>
             </Canvas>
           </Suspense>
