@@ -1,17 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Youtube from "react-player/youtube";
+import Ratio from 'react-bootstrap/Ratio';
 
 
 export default function YoutubeEmbed({embedId}){
   return(
-    <div>
-      <Youtube
-        width="80vw"
-
-        url={`https://www.youtube.com/embed/${embedId}`}
-        controls
-      />
-    </div>
+    <Ratio aspectRatio="16x9">
+      <iframe 
+        src={`https://www.youtube.com/embed/${embedId}`}
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+      </iframe>
+    </Ratio>
   ) 
 }

@@ -1,6 +1,9 @@
 import { useState } from 'react'
-import Header from './Components/Header/Header'
+
 import './App.css'
+
+
+import Header from './Components/Header/Header'
 import Home from './Components/Home/Home'
 import Media from './Components/Media/Media'
 
