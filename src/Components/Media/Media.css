@@ -14,11 +14,11 @@
 
 }
  
-@media (max-width:600px){
+@media (min-width:600px){
     .video{
-        width: 100% !important;
+        width: 80% !important;
     }
 }
 .video{
-    width: 80% !important;
+    width: 100% !important;
 }
