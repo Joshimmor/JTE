@@ -14,15 +14,23 @@ const Controls = () => {
   const {camera, gl} = useThree();
   return (
       <OrbitControls
+          // args={[camera, gl.domElement]}
+          // ref={orbitRef}
+          // minDistance={30}
+          // maxDistance={30}
+          // maxPolarAngle={1}
+          // minPolarAngle={1}
+          // enableZoom={false}
+          // enablePan={false}
+          // rotateSpeed={.6}
           args={[camera, gl.domElement]}
           ref={orbitRef}
-          minDistance={30}
-          maxDistance={30}
-          maxPolarAngle={1}
-          minPolarAngle={1}
           enableZoom={false}
-          enablePan={false}
-          rotateSpeed={.6}
+          maxDistance={5}
+          minDistance={5}
+          maxPolarAngle={1.25}
+          minPolarAngle={1.25}
+        
           />
   )
 }
