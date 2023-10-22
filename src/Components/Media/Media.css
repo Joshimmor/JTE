@@ -8,9 +8,17 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    background-image: url("bg3.png");
+    background-image: url("./bg3.png");
     background-size: cover;
     background-position: center;
 
 }
-
+ 
+@media (max-width:600px){
+    .video{
+        width: 100% !important;
+    }
+}
+.video{
+    width: 80% !important;
+}
