@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState,useRef } from 'react'
 
 import './App.css'
 
@@ -9,16 +9,16 @@ import Media from './Components/Media/Media'
 import Background from './Components/Background/Background'
 
 function App() {
-
+  let containerRef = useRef();
 
   return (
-    <>
+    <div ref={containerRef}>
       <Header/>
-      <Background/>
+      <Background containerRef={containerRef} />
       <Home/>
       <Media/>
 
-    </>
+    </div>
   )
 }
 

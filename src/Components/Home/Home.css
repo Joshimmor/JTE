@@ -21,7 +21,7 @@ h1{
 
 @media  (min-width:700px) {
     h1{
-        font-size: 15em !important;
+        font-size: 14em !important;
         color: rgb(33, 33, 33);
     }
 }

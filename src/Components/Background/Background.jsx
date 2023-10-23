@@ -2,10 +2,12 @@
 import { WhiteTiger } from './WhiteTiger'
 import "./Background.css"
 
-import React, {useRef,useState ,Suspense} from 'react';
-
-import { OrbitControls,DeviceOrientationControls } from '@react-three/drei';
+import React, {useRef,useState ,Suspense,useEffect} from 'react';
+import { useScroll } from '@react-spring/core'
+import { a } from "@react-spring/three";
+import { OrbitControls,DeviceOrientationControls, PerspectiveCamera } from '@react-three/drei';
 import { Canvas, useFrame, useThree} from '@react-three/fiber';
+// import {Mask} from './Mask';
 
 
 
@@ -37,18 +39,26 @@ function devicePermission() {
     window.location.reload(false);
   } 
 }
-export default function Background() {
-
+export default function Background({containerRef}) {
+  const timeoutRef = React.useRef(null);
+  let [rotate,updateRotation] = useState(0.0)
+  useEffect(()=>{
+    timeoutRef.current = setTimeout(()=>{
+        updateRotation(rotate + .01)
+    },10)
+},[updateRotation,rotate])
+const {scrollYPosition} = useScroll({
+  container:containerRef
+});
   return (
       <div className="background">
           <Suspense>
             <Canvas>
-              <Controls />
               <ambientLight/>
-
               <pointLight position={[10,10,10]} intensity={8} />
               <group>
-                  <WhiteTiger position={[0,-10,8]} rotation ={[0,0,0]}scale={7}/>
+                  <WhiteTiger containerRef={containerRef} position={[0,-2.5,0]} rotation={[0,rotate,0]} scale={2}/>
+                  {/* <Mask  position={[0,0,0]} rotation ={[0,0,0]}scale={1}/> */}
               </group>
             </Canvas>
           </Suspense>

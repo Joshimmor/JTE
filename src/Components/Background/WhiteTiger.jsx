@@ -7,17 +7,24 @@ Source: https://sketchfab.com/3d-models/white-tiger-power-ranger-78ff61fd491f433
 Title: White Tiger Power Ranger
 */
 
-import React, { useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useGLTF } from '@react-three/drei'
+
+import { useSpring, useScroll } from "@react-spring/core";
+import { a } from "@react-spring/three";
 
 export function WhiteTiger(props) {
   const { nodes, materials } = useGLTF('/white_tiger_power_ranger.glb')
+  
   return (
-    <group {...props} dispose={null}>
-      <mesh geometry={nodes.PolySphere1_2_PolySphere1_20_0.geometry} material={materials.PolySphere1_20} />
-      <mesh geometry={nodes.PolySphere1_3_PolySphere1_30_0.geometry} material={materials.PolySphere1_30} />
-      <mesh geometry={nodes.PolySphere1_3_PolySphere1_30_0_1.geometry} material={materials.PolySphere1_30} />
-      <mesh geometry={nodes.PolySphere1_3_PolySphere1_31_0.geometry} material={materials.PolySphere1_31} />
+    <group >
+
+          <a.group  {...props} dispose={null}>
+            <mesh geometry={nodes.PolySphere1_2_PolySphere1_20_0.geometry} material={materials.PolySphere1_20} />
+            <mesh geometry={nodes.PolySphere1_3_PolySphere1_30_0.geometry} material={materials.PolySphere1_30} />
+            <mesh geometry={nodes.PolySphere1_3_PolySphere1_30_0_1.geometry} material={materials.PolySphere1_30} />
+            <mesh geometry={nodes.PolySphere1_3_PolySphere1_31_0.geometry} material={materials.PolySphere1_31} />
+          </a.group>
     </group>
   )
 }
