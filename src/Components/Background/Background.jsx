@@ -47,9 +47,8 @@ export default function Background({containerRef}) {
         updateRotation(rotate + .01)
     },10)
 },[updateRotation,rotate])
-const {scrollYPosition} = useScroll({
-  container:containerRef
-});
+
+
   return (
       <div className="background">
           <Suspense>
@@ -57,7 +56,7 @@ const {scrollYPosition} = useScroll({
               <ambientLight/>
               <pointLight position={[10,10,10]} intensity={8} />
               <group>
-                  <WhiteTiger containerRef={containerRef} position={[0,-2.5,0]} rotation={[0,rotate,0]} scale={2}/>
+                  <WhiteTiger containerRef={containerRef} position={[0,-2.5,0]} rotation={[0,window.pageYOffset/614,0]} scale={2}/>
                   {/* <Mask  position={[0,0,0]} rotation ={[0,0,0]}scale={1}/> */}
               </group>
             </Canvas>
