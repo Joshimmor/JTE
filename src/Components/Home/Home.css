@@ -8,6 +8,7 @@
     top:0;
     left:0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     
@@ -16,6 +17,7 @@
 h1{
     font-family: 'Ryujin Attack', sans-serif;
     font-size: 8em !important;
+    font-weight: bold;
     color: rgb(50, 50, 50);
   
 }

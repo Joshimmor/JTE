@@ -53,11 +53,11 @@ export default function Background({containerRef}) {
       <div className="background">
           <Suspense>
             <Canvas>
-              <ambientLight/>
+              <ambientLight intensity={2.5}/>
               <pointLight position={[10,10,10]} intensity={8} />
               <group>
                   {/* <WhiteTiger containerRef={containerRef} position={[0,-2.5,0]} rotation={[0,window.pageYOffset/614,0]} scale={2}/> */}
-                  <Mask  position={[0,0,0]}  rotation={[0,((window.pageYOffset/614)+Math.PI),0]}  scale={1.5}/>
+                  <Mask  position={[0,0,0]}  rotation={[0,((window.pageYOffset/(210*Math.PI))+Math.PI),0]}  scale={1.5}/>
               </group>
             </Canvas>
           </Suspense>

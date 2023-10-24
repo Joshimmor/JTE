@@ -26,6 +26,9 @@ export default function Home() {
   return (
     <div className='hero'>
        <h1>{names[currIndex]}</h1>
+       <h1>{names[currIndex]}</h1>
+       <h1>{names[currIndex]}</h1>
+       <h1>{names[currIndex]}</h1>
     </div>
   )
 }
