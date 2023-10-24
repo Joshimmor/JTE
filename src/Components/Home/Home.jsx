@@ -21,7 +21,7 @@ export default function Home() {
             else{
                 updateIndex(0)
             }
-        },3000)
+        },1000)
     },[currIndex])
   return (
     <div className='hero'>

@@ -7,7 +7,7 @@ import { useScroll } from '@react-spring/core'
 import { a } from "@react-spring/three";
 import { OrbitControls,DeviceOrientationControls, PerspectiveCamera } from '@react-three/drei';
 import { Canvas, useFrame, useThree} from '@react-three/fiber';
-// import {Mask} from './Mask';
+import {Mask} from './Mask';
 
 
 
@@ -56,8 +56,8 @@ export default function Background({containerRef}) {
               <ambientLight/>
               <pointLight position={[10,10,10]} intensity={8} />
               <group>
-                  <WhiteTiger containerRef={containerRef} position={[0,-2.5,0]} rotation={[0,window.pageYOffset/614,0]} scale={2}/>
-                  {/* <Mask  position={[0,0,0]} rotation ={[0,0,0]}scale={1}/> */}
+                  {/* <WhiteTiger containerRef={containerRef} position={[0,-2.5,0]} rotation={[0,window.pageYOffset/614,0]} scale={2}/> */}
+                  <Mask  position={[0,0,0]}  rotation={[0,((window.pageYOffset/614)+Math.PI),0]}  scale={1.5}/>
               </group>
             </Canvas>
           </Suspense>
