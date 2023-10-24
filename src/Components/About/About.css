@@ -1,0 +1,15 @@
+.about{
+    max-width: 100%;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items:center;
+    background:url("/graff.png");
+}
+.textbox{
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+}

@@ -19,7 +19,7 @@ export function WhiteTiger(props) {
   return (
     <group >
 
-          <a.group  {...props} dispose={null}>
+          <a.group  {...props}  dispose={null}>
             <mesh geometry={nodes.PolySphere1_2_PolySphere1_20_0.geometry} material={materials.PolySphere1_20} />
             <mesh geometry={nodes.PolySphere1_3_PolySphere1_30_0.geometry} material={materials.PolySphere1_30} />
             <mesh geometry={nodes.PolySphere1_3_PolySphere1_30_0_1.geometry} material={materials.PolySphere1_30} />

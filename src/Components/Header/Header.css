@@ -8,14 +8,14 @@
     /* display: flex;
     flex-direction: column;
     justify-content: space-between; */
-
+    z-index: 10;
 }
 .header-rows-top{
     width: inherit;
     height: 5vh;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     box-sizing: border-box;
     padding:  10px 20px;
@@ -31,7 +31,7 @@
     height: 5vh;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     box-sizing: border-box;
     padding:  10px 20px;
