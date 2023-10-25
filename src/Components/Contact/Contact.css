@@ -1,16 +1,18 @@
 .contact{
     max-width: 100%;
     width: 100vw;
-    height: auto;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items:center;
     background:url("/graff.png");
+    overflow-x: hidden;
+    overflow-Y: hidden;
 }
 .textbox{
     width: 100vw;
-    height: 100vh;
+    height: 80vh;
     max-width: 100%;
     padding: 10px;
     z-index: 7;
