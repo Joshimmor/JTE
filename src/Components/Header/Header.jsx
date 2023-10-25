@@ -1,9 +1,9 @@
 import "./Header.css"
-export default function Header ({aboutRef,mediaRef}){
+export default function Header ({contactRef,mediaRef}){
     return(
         <div className="header-base">
             <div className="header-rows-top">
-                <a onClick={()=> aboutRef.current.scrollIntoView()}>ABOUT</a>
+                <a onClick={()=> contactRef.current.scrollIntoView()}>CONTACT</a>
                 <a>SHOP</a>
             </div>
             <div className="header-rows-bottom">

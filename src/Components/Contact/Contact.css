@@ -1,0 +1,45 @@
+.contact{
+    max-width: 100%;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items:center;
+    background:url("/graff.png");
+}
+.textbox{
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    padding: 10px;
+    z-index: 7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:start;
+}
+.contacttext{
+    color: rgb(255, 116, 42);
+    font-family: roboto;
+    font-size: 5em !important;
+    background-color: rgb(218, 218, 218);
+    padding: 10px;
+    margin-bottom: 0;
+}
+.contactsubtext{
+    color: rgb(255, 116, 42);
+    font-family: roboto;
+    font-size: 3em !important;
+    background-color: rgb(218, 218, 218);
+    padding: 10px;
+    margin: 0;
+}
+.contactsubsubtext{
+    color: rgb(255, 116, 42);
+    font-family: roboto;
+    font-size: 2em !important;
+    background-color: rgb(218, 218, 218);
+    padding: 10px;
+    margin: 0;
+}
